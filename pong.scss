@@ -1,0 +1,43 @@
+body {overflow: hidden;}
+#pong_background {
+    display: flex;
+    background: black;
+    justify-content: center;
+    .line, .score1, .score2, #bar1, #bar2 {background-color: #FFF;}
+    .pong_ingame{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        justify-content: space-between;
+        align-items: center;
+        #bar1, #bar2 {position: relative; width: 2vw; height: 15vh;}
+        #ball {
+            position: relative;
+            width: 2vw;
+            height: 2vw;
+            border-radius: 50%;
+            background-color: red;
+            transition: .01s ease;
+        }
+    }
+    .line{width: .5%; height: 100vh;}
+    .score {
+        display: grid;
+        width: 5vw; 
+        height: 15vh;
+        margin: 5% 10%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        .score1 {
+            grid-column: 2/3;
+            grid-row: 2/5;
+            background-color: black;
+        }
+        .score2 {
+            grid-column: 2/3;
+            grid-row: 2/5;
+            background-color: black;
+        }
+    }
+}
